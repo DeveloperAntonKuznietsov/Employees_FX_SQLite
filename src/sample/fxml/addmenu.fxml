@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="247.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ControllerAddMenu">
+   <children>
+      <Label layoutX="35.0" layoutY="23.0" text="Должность" />
+      <Label layoutX="34.0" layoutY="75.0" text="ФИО" />
+      <Label layoutX="277.0" layoutY="130.0" text="Пол" />
+      <Label layoutX="34.0" layoutY="130.0" text="Сводка" />
+      <Label layoutX="276.0" layoutY="23.0" text="Дата рождения" />
+      <Label layoutX="277.0" layoutY="75.0" text="Дата добавления" />
+      <TextField fx:id="fldPosition" layoutX="35.0" layoutY="40.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="fldFIO" layoutX="35.0" layoutY="92.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="fldDOB" layoutX="277.0" layoutY="39.0" prefHeight="25.0" prefWidth="208.0" />
+      <TextField fx:id="fldUploadData" layoutX="276.0" layoutY="92.0" prefHeight="25.0" prefWidth="208.0" />
+      <Button fx:id="btnAdd" layoutX="312.0" layoutY="202.0" mnemonicParsing="false" onAction="#Adding" text="Добавить" />
+      <Button fx:id="btnCancel" cancelButton="true" layoutX="415.0" layoutY="202.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="69.0" text="Отмена" />
+      <TextArea fx:id="fldResume" layoutX="34.0" layoutY="147.0" prefHeight="77.0" prefWidth="208.0" />
+      <TextField fx:id="fldSex" layoutX="276.0" layoutY="147.0" prefHeight="25.0" prefWidth="208.0" />
+   </children>
+</AnchorPane>
