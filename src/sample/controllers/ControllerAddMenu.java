@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javafx.stage.Window;
 
 import java.sql.SQLException;
@@ -33,13 +34,13 @@ public class ControllerAddMenu {
 
     @FXML
     private void initialize(){
-        btnCancel = new Button();
+
 
 
     }
 
     public void close(ActionEvent actionEvent) {
-        btnCancel = new Button();
+        CloseWindow();
 
     }
 
@@ -64,8 +65,10 @@ public class ControllerAddMenu {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        CloseWindow();
     }
     private void CloseWindow(){
-
+        Stage stage = (Stage) btnCancel.getScene().getWindow();
+        stage.close();
     }
 }
