@@ -2,16 +2,22 @@ package sample.controllers;
 
 import sample.Employee.Person;
 
+import java.io.File;
 import java.sql.*;
+import java.util.Formatter;
 
 public class DBConnector {
     public static Connection conn;
     public static Statement statmt;
     public static ResultSet resSet;
-
+    static File file = new File("employee.db");
     // --------ПОДКЛЮЧЕНИЕ К БАЗЕ ДАННЫХ--------
     public static void Connect() throws ClassNotFoundException, SQLException
-    {
+    {   if(!file.exists()){
+       try {
+           Formatter file= new Formatter("employee.db");
+       }catch (Exception e){e.printStackTrace();}
+    }
         conn = null;
         Class.forName("org.sqlite.JDBC");
         conn = DriverManager.getConnection("jdbc:sqlite:employee.db");
